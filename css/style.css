@@ -38,28 +38,19 @@ p{
   padding: 20px;
   text-align: center;
   width: 100%;
-
 }
 
 img{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 35%;
+  width: 40%;
   margin-top: 50px;
   margin-bottom: 50px;
   border: black solid 5px;
+  /* height: auto;
+  overflow: hidden; */
 }
-/* 
-.container {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto auto auto auto auto auto auto;
-  justify-content: space-around;
-  align-items: center;
-  padding-right: 50px;
-
-} */
 
 
 .container {
@@ -111,11 +102,12 @@ img{
 
 .grid3{
   display: grid;
-  grid-template-columns: 1.7fr 2fr 1.7fr;
-  grid-template-rows: ;
+  grid-template-columns: 80%;
+  grid-template-rows: repeat(3, auto);
   grid-gap: 5px;
   padding-bottom: 100px;
   padding-top: 50px;
+  justify-content: center;
 }
 
 .grid4{
@@ -157,7 +149,7 @@ h2{
   font-size: 40px;
   line-height: 1;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   text-align: center;
   font-weight: bold;
   /* text-decoration: underline; */
@@ -194,11 +186,9 @@ nav a:hover{
   border-width: 2px;
 }
 
-.skip a{
-  visibility: hidden;
+a.skip{
+  /* visibility: hidden; */
 }
-
-
 
 
 
@@ -218,19 +208,21 @@ nav a:hover{
     font-size: 50px;
   }
 
-  .skip a{
-    left: 50%;
+  .skip{
+    font-size: 20px;
+    background: black;
+    color: rgb(252, 220, 225);
+    left: 20px;
+    padding: 6px;
+    -webkit-transition: top 0.75s ease-out;
+    transition: top 0.75s ease-out;
+    z-index: 1;
+    top: -60px;
     position: absolute;
-    transform: translateY(-100%);
-    background-color: white;
-    padding: 8px;
-    position: absolute;
-    transform: translateY(-100%);
-    transition: transform 0.3s;
-  }
-
-  .skip a:focus{
-    transform: translateY(0%);
+    }
+    
+  .skip:focus{
+    top: 0; 
   }
 
   .grid img{
@@ -251,11 +243,14 @@ nav a:hover{
 
   }
 
-  /* .container{
-    display: flex;
-    flex-wrap: wrap;
-  } */
-
+  .grid3{
+    display: grid;
+    grid-template-columns: 1.7fr 2fr 1.7fr;
+    grid-template-rows: ;
+    grid-gap: 5px;
+    padding-bottom: 100px;
+    padding-top: 50px;
+  }
 
   .container {
     display: grid;
@@ -264,9 +259,10 @@ nav a:hover{
     justify-content: space-around;
     align-items: center;
     padding-right: 50px;
-    
-
   } 
 
-
+  #experience_grid {
+    display: flex;
+    flex-direction: row;
+  }
 }
