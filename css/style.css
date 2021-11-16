@@ -186,9 +186,18 @@ nav a:hover{
   border-width: 2px;
 }
 
-a.skip{
-  /* visibility: hidden; */
-}
+.skip{
+  font-size: 20px;
+  background: black;
+  color: rgb(252, 220, 225);
+  left: 20px;
+  padding: 6px;
+  -webkit-transition: top 0.75s ease-out;
+  transition: top 0.75s ease-out;
+  z-index: 1;
+  top: -60px;
+  position: absolute;
+  }
 
 
 
@@ -206,20 +215,7 @@ a.skip{
     /* text-decoration: underline; */
     font-weight: normal;
     font-size: 50px;
-  }
-
-  .skip{
-    font-size: 20px;
-    background: black;
-    color: rgb(252, 220, 225);
-    left: 20px;
-    padding: 6px;
-    -webkit-transition: top 0.75s ease-out;
-    transition: top 0.75s ease-out;
-    z-index: 1;
-    top: -60px;
-    position: absolute;
-    }
+  } 
     
   .skip:focus{
     top: 0; 
